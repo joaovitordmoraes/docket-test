@@ -62,3 +62,19 @@ html, body {
     font-weight: bold;
     color: var(--color-zero);
 }
+
+@media (max-width: 576px) {
+    .banner {
+        background-size: cover;
+        background-position: left;
+        height: 130px;
+    }
+
+    .banner > .wrapper {
+        margin-top: 30px;
+    }
+
+    .banner .logo {
+        max-width: 57px;
+    }
+}
