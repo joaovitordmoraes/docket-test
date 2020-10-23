@@ -59,6 +59,7 @@ html, body {
     display: flex;
     justify-content: center;
     margin-top: -70px;
+    padding: 0 20px;
 }
 
 .apply .box-form {
@@ -180,12 +181,91 @@ html, body {
     font-style: italic;
     color: var(--color-three);
     line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.box-infos .info-content {
+    display: none;
+}
+
+.info-content > .field:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.info-content .name {
+    font-size: var(--size-small);
+    color: var(--color-one);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-content .content {
+    font-size: var(--size-small);
+    font-weight: 600;
+    color: var(--color-one);
+}
+
+.info-content .content.-empty {
+    color: var(--color-three);
 }
 
 .project-gallery > .subtitle {
     font-size: var(--size-medium);
     font-weight: 600;
     color: var(--color-one);
+    margin-bottom: 20px;
+}
+
+.project-gallery .projects-list {
+    position: relative;
+}
+
+.project-gallery .project-carousel {
+    width: 100%;
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+
+.project-gallery .project-carousel:after {
+    content: 'flickity';
+    display: none; 
+}
+
+.project-carousel .flickity-viewport {
+    margin-left: -0.5%;
+    margin-right: -0.5%;
+}
+
+.projects-list .controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 24px));
+    width: 100%;
+}
+
+.projects-list .arrow {
+    width: 10px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.projects-list .arrow.-prev {
+    left: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-right: 12px solid var(--color-five);
+}
+
+.projects-list .arrow.-next {
+    right: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-left: 12px solid var(--color-five);
 }
 
 .footer {
@@ -202,6 +282,22 @@ html, body {
     font-size: var(--size-small);
     font-weight: bold;
     color: var(--color-zero);
+}
+
+@media (max-width: 1024px) {
+    .apply > .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apply .box-form {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        position: relative;
+    }
 }
 
 @media (max-width: 576px) {
@@ -235,5 +331,11 @@ html, body {
     .apply-form .group-field > .field:not(:last-of-type) {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .project-carousel .carousel-cell {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
