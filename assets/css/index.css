@@ -69,6 +69,7 @@ html, body {
     box-sizing: border-box;
     border-radius: 4px;
     box-shadow: 0 1px 2px var(--color-one-light);
+    margin-right: 30px;
 }
 
 .box-form .title {
@@ -153,11 +154,48 @@ html, body {
     outline: none;
 }
 
+.apply .box-infos {
+    background-color: var(--color-seven);
+    max-width: 486px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--color-five);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-infos .title {
+    font-size: var(--size-large);
+    font-weight: bold;
+    color: var(--color-six);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.box-infos .description {
+    font-size: var(--size-small);
+    font-style: italic;
+    color: var(--color-three);
+    line-height: 20px;
+}
+
+.project-gallery > .subtitle {
+    font-size: var(--size-medium);
+    font-weight: 600;
+    color: var(--color-one);
+}
+
 .footer {
     padding: 22px 0;
     text-align: center;
     border-radius: 4px;
     background: transparent linear-gradient(116deg, var(--color-eight) 0%, var(--color-nine) 100%) 0% 0% no-repeat padding-box;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer > .copy {
