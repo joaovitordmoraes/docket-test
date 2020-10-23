@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/flickity.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
@@ -17,8 +18,106 @@
         </div>
     </header>
 
+    <section class="apply">
+        <div class="wrapper">
+            <div class="box-form">
+                <h1 class="title">Venha trabalhar na Docket</h1>
+
+                <p class="description">Preencha o formulário abaixo e venha trabalhar em uma das startups mais desejadas do Brasil!</p>
+
+                <h2 class="data">Dados pessoais</h2>
+
+                <form class="apply-form">
+                    <div class="field">
+                        <label for="name"><span class="required">*</span> Nome completo:</label>
+                        <input type="text" name="name" minlength="2" required placeholder="Digite seu nome aqui">
+                    </div>
+
+                    <div class="field">
+                        <label for="email"><span class="required">*</span> E-mail:</label>
+                        <input type="email" name="email" required placeholder="seunome@sobrenome.com.br">
+                    </div>
+
+                    <div class="group-field">
+                        <div class="field">
+                            <label for="tel1"><span class="required">*</span> Telefone 1:</label>
+                            <input type="tel" name="tel1" minlength="13" required placeholder="(88) 8888-8888">
+                        </div>
+    
+                        <div class="field">
+                            <label for="tel2">Telefone 2:</label>
+                            <input type="tel" name="tel2" minlength="13" placeholder="(88) 8888-8888">
+                        </div>
+                    </div>
+
+                    <button class="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="box-infos">
+                <div class="heading">
+                    <h2 class="title">Ficha do candidato</h2>
+    
+                    <p class="description">Preencha o formulário e clique em "Enviar" após conferir atentamente.</p>
+
+                    <div class="info-content">
+                        <div class="field">
+                            <p class="name">Nome completo:</p>
+                            <p class="content">Teste de nome</p>
+                        </div>
+    
+                        <div class="field">
+                            <p class="name">E-mail:</p>
+                            <p class="content">seuemail@email.com.br</p>
+                        </div>
+    
+                        <div class="field">
+                            <p class="name">Telefone 1:</p>
+                            <p class="content">(00) 0000-0000</p>
+                        </div>
+    
+                        <div class="field">
+                            <p class="name">Telefone 2:</p>
+                            <p class="content -empty">Não informado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-gallery">
+                    <h3 class="subtitle">Seus projetos:</h3>
+
+                    <div class="projects-list">
+                        <div class="project-carousel">
+                            <div class="carousel-cell">
+                                <img src="./assets/images/generic-1.png" alt="">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="./assets/images/generic-2.png" alt="">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="./assets/images/generic-1.png" alt="">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="./assets/images/generic-2.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <div class="arrow -prev"></div>
+                            <div class="arrow -next"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <h4 class="copy">DOCKET © 2019</h4>
     </footer>
+
+    <script src="./assets/js/flickity.min.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
