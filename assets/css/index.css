@@ -218,6 +218,8 @@ html, body {
 
 .project-gallery .projects-list {
     position: relative;
+    height: 130px;
+    overflow: hidden;
 }
 
 .project-gallery .project-carousel {
@@ -234,6 +236,17 @@ html, body {
 .project-carousel .flickity-viewport {
     margin-left: -0.5%;
     margin-right: -0.5%;
+}
+
+.project-carousel .carousel-cell {
+    max-width: 196px;
+    width: 100%;
+    text-align: center;
+}
+
+.project-carousel .carousel-cell > img {
+    max-width: 180px;
+    height: 128px;
 }
 
 .projects-list .controls {
