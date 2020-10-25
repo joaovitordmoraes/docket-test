@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Docket</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/flickity.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="wrapper">
+            <img src="./assets/images/logo-docket.svg" class="logo" alt="Logo Docket">
+        </div>
+    </header>
+
+    <section class="apply">
+        <div class="wrapper">
+            <div class="box-form">
+                <h1 class="title">Venha trabalhar na Docket</h1>
+
+                <p class="description">Preencha o formulário abaixo e venha trabalhar em uma das startups mais desejadas do Brasil!</p>
+
+                <h2 class="data">Dados pessoais</h2>
+
+                <form class="apply-form" method="post">
+                    <div class="field">
+                        <label for="name"><span class="required">*</span> Nome completo:</label>
+                        <input class="name" type="text" name="name" minlength="2" required placeholder="Digite seu nome aqui">
+                        <span class="error"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="email"><span class="required">*</span> E-mail:</label>
+                        <input class="email" type="email" name="email" required placeholder="seunome@sobrenome.com.br">
+                        <span class="error"></span>
+                    </div>
+
+                    <div class="group-field">
+                        <div class="field">
+                            <label for="tel1"><span class="required">*</span> Telefone 1:</label>
+                            <input class="tel1 phone" type="tel" name="tel1" minlength="13" required placeholder="(88) 8888-8888">
+                            <span class="error"></span>
+                        </div>
+    
+                        <div class="field">
+                            <label for="tel2">Telefone 2:</label>
+                            <input class="tel2 phone" type="tel" name="tel2" minlength="13" required placeholder="(88) 8888-8888">
+                            <span class="error"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="box-infos">
+                <div class="heading">
+                    <h2 class="title">Ficha do candidato</h2>
+    
+                    <p class="description">Preencha o formulário e clique em "Enviar" após conferir atentamente.</p>
+
+                    <div class="apply-content"></div>
+                </div>
+
+                <div class="project-gallery">
+                    <h3 class="subtitle">Seus projetos:</h3>
+
+                    <div class="projects-list">
+
+                        <div class="controls">
+                            <div class="arrow -prev"></div>
+                            <div class="arrow -next"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="success">
+        <picture class="ico">
+            <img src="./assets/images/ico-success.svg"  alt="Ícone de sucesso">
+        </picture>
+        <span class="message">Candidatura enviada com sucesso!</span>
+    </div>
+
+    <footer class="footer">
+        <h4 class="copy">DOCKET © 2019</h4>
+    </footer>
+
+    <script src="./assets/js/flickity.min.js"></script>
+    <script src="./assets/js/vanilla-masker.min.js"></script>
+    <script src="./assets/js/gallery.js"></script>
+    <script src="./assets/js/form.js"></script>
+</body>
+</html>
