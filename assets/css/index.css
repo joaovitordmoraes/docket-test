@@ -184,7 +184,7 @@ html, body {
     margin-bottom: 20px;
 }
 
-.box-infos .info-content {
+.box-infos .description.-hidden{
     display: none;
 }
 

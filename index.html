@@ -27,30 +27,31 @@
 
                 <h2 class="data">Dados pessoais</h2>
 
-                <form class="apply-form">
+                <form class="apply-form" method="post">
                     <div class="field">
                         <label for="name"><span class="required">*</span> Nome completo:</label>
-                        <input type="text" name="name" minlength="2" required placeholder="Digite seu nome aqui">
+                        <input class="name" type="text" name="name" minlength="2" required placeholder="Digite seu nome aqui">
+                        <span class="error"></span>
                     </div>
 
                     <div class="field">
                         <label for="email"><span class="required">*</span> E-mail:</label>
-                        <input type="email" name="email" required placeholder="seunome@sobrenome.com.br">
+                        <input class="email" type="email" name="email" required placeholder="seunome@sobrenome.com.br">
                     </div>
 
                     <div class="group-field">
                         <div class="field">
                             <label for="tel1"><span class="required">*</span> Telefone 1:</label>
-                            <input type="tel" name="tel1" minlength="13" required placeholder="(88) 8888-8888">
+                            <input class="tel1" type="tel" name="tel1" minlength="13" required placeholder="(88) 8888-8888">
                         </div>
     
                         <div class="field">
                             <label for="tel2">Telefone 2:</label>
-                            <input type="tel" name="tel2" minlength="13" placeholder="(88) 8888-8888">
+                            <input class="tel2" type="tel" name="tel2" minlength="13" placeholder="(88) 8888-8888">
                         </div>
                     </div>
 
-                    <button class="submit">Enviar</button>
+                    <button type="submit" class="submit">Enviar</button>
                 </form>
             </div>
 
@@ -59,28 +60,6 @@
                     <h2 class="title">Ficha do candidato</h2>
     
                     <p class="description">Preencha o formulário e clique em "Enviar" após conferir atentamente.</p>
-
-                    <div class="info-content">
-                        <div class="field">
-                            <p class="name">Nome completo:</p>
-                            <p class="content">Teste de nome</p>
-                        </div>
-    
-                        <div class="field">
-                            <p class="name">E-mail:</p>
-                            <p class="content">seuemail@email.com.br</p>
-                        </div>
-    
-                        <div class="field">
-                            <p class="name">Telefone 1:</p>
-                            <p class="content">(00) 0000-0000</p>
-                        </div>
-    
-                        <div class="field">
-                            <p class="name">Telefone 2:</p>
-                            <p class="content -empty">Não informado</p>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="project-gallery">
@@ -105,5 +84,6 @@
 
     <script src="./assets/js/flickity.min.js"></script>
     <script src="./assets/js/gallery.js"></script>
+    <script src="./assets/js/form.js"></script>
 </body>
 </html>
