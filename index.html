@@ -37,17 +37,20 @@
                     <div class="field">
                         <label for="email"><span class="required">*</span> E-mail:</label>
                         <input class="email" type="email" name="email" required placeholder="seunome@sobrenome.com.br">
+                        <span class="error"></span>
                     </div>
 
                     <div class="group-field">
                         <div class="field">
                             <label for="tel1"><span class="required">*</span> Telefone 1:</label>
-                            <input class="tel1" type="tel" name="tel1" minlength="13" required placeholder="(88) 8888-8888">
+                            <input class="tel1 phone" type="tel" name="tel1" minlength="13" required placeholder="(88) 8888-8888">
+                            <span class="error"></span>
                         </div>
     
                         <div class="field">
                             <label for="tel2">Telefone 2:</label>
-                            <input class="tel2" type="tel" name="tel2" minlength="13" placeholder="(88) 8888-8888">
+                            <input class="tel2 phone" type="tel" name="tel2" minlength="13" required placeholder="(88) 8888-8888">
+                            <span class="error"></span>
                         </div>
                     </div>
 
@@ -60,6 +63,8 @@
                     <h2 class="title">Ficha do candidato</h2>
     
                     <p class="description">Preencha o formulário e clique em "Enviar" após conferir atentamente.</p>
+
+                    <div class="apply-content"></div>
                 </div>
 
                 <div class="project-gallery">
@@ -78,11 +83,19 @@
         </div>
     </section>
 
+    <div class="success">
+        <picture class="ico">
+            <img src="./assets/images/ico-success.svg"  alt="Ícone de sucesso">
+        </picture>
+        <span class="message">Candidatura enviada com sucesso!</span>
+    </div>
+
     <footer class="footer">
         <h4 class="copy">DOCKET © 2019</h4>
     </footer>
 
     <script src="./assets/js/flickity.min.js"></script>
+    <script src="./assets/js/vanilla-masker.min.js"></script>
     <script src="./assets/js/gallery.js"></script>
     <script src="./assets/js/form.js"></script>
 </body>
