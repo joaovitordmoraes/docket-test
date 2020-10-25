@@ -6,7 +6,6 @@
     })
     .then(function(data) {
         getImage(data);
-        
     })
 
     function getImage(data) {

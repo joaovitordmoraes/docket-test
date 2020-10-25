@@ -118,6 +118,13 @@ html, body {
     border-radius: 2px;
 }
 
+.apply-form .field > .error {
+    font-size: var(--size-xsmall);
+    color: var(--color-one);
+    display: block;
+    margin-top: 4px;
+}
+
 .apply-form .field > input::placeholder {
     color: var(--color-four);
 }
@@ -125,6 +132,11 @@ html, body {
 .apply-form .field > input:focus {
     border: 2px solid var(--color-two);
     outline: none;
+}
+
+.apply-form .group-field {
+    display: flex;
+    align-items: flex-start;
 }
 
 .apply-form .group-field > .field {
@@ -184,8 +196,12 @@ html, body {
     margin-bottom: 20px;
 }
 
-.box-infos .info-content {
+.box-infos .description.-hidden {
     display: none;
+}
+
+.box-infos .info-content {
+    margin-bottom: 30px;
 }
 
 .info-content > .field:not(:last-of-type) {
@@ -281,6 +297,211 @@ html, body {
     border-left: 12px solid var(--color-five);
 }
 
+.success {
+    background-color: var(--color-twelve-light);
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 18px 30px;
+    border: 2px solid var(--color-fourteen);
+    border-radius: 30px;
+    opacity: 0;
+}
+
+.success.-active {
+    animation: fadeIn ease 500ms;
+    -webkit-animation: fadeIn ease 500ms;
+    -moz-animation: fadeIn ease 500ms;
+    -o-animation: fadeIn ease 500ms;
+    -ms-animation: fadeIn ease 500ms;
+    display: inline-flex;
+    opacity: 1;
+}
+
+.success.-inactive {
+    animation: fadeOut ease 500ms;
+    -webkit-animation: fadeOut ease 500ms;
+    -moz-animation: fadeOut ease 500ms;
+    -o-animation: fadeOut ease 500ms;
+    -ms-animation: fadeOut ease 500ms;
+    display: inline-flex;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity:0;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 0;
+    }
+    100% {
+        display: inline-flex;
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity:0;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 0;
+    }
+    100% {
+        display: inline-flex;
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity:0;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 0;
+    }
+    100% {
+        display: inline-flex;
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity:0;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 0;
+    }
+    100% {
+        display: inline-flex;
+        opacity:1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity:0;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 0;
+    }
+    100% {
+        display: inline-flex;
+        opacity:1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        display: inline-flex;
+        opacity:1;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        display: inline-flex;
+        opacity:1;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        display: inline-flex;
+        opacity:1;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        display: inline-flex;
+        opacity:1;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes fadeOut {
+    0% {
+        display: inline-flex;
+        opacity:1;
+    }
+    1% {
+        display: inline-flex;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.success > .ico {
+    margin-right: 32px;
+    position: relative;
+}
+
+.success > .ico::after {
+    content: '';
+    position: absolute;
+    right: -16px;
+    top: -9px;
+    width: 1px;
+    height: calc(100% + 18px);
+    background-color: var(--color-fifteen);
+}
+
+.success > .message {
+    color: var(--color-fifteen);
+    font-size: var(--size-medium);
+    font-weight: 600;
+}
+
 .footer {
     padding: 22px 0;
     text-align: center;
@@ -335,6 +556,10 @@ html, body {
 
     .apply .box-form {
         padding: 20px;
+    }
+
+    .apply-form .group-field {
+        display: block;
     }
 
     .apply-form .group-field > .field {
